@@ -4,7 +4,9 @@ export default async (req, res) => {
     const {id, fields} = req.body;
 
     try{
+        //const updatedRecords = await table.update([
         const updatedRecords = table.update([
+
             {id, fields }
         ]);
         res.status = 200;
